@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": ["Read files", "List directory", "Search files", "Run tests", "Run linter", "Git status", "Git diff"],
+    "deny": ["rm -rf /", "DROP DATABASE", "git push --force main", "chmod 777"]
+  },
+  "model": "claude-sonnet-4-20250514",
+  "hooks": {
+    "preToolExecution": [".claude/hooks/validate-bash.sh"]
+  }
+}
